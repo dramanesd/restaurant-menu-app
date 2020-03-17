@@ -1,0 +1,30 @@
+<html>
+<head>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+	</head>
+
+<body>
+	{% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <ul>
+        {% for message in messages %}
+          <li><strong>{{ message }}</strong></li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endwith %}
+<h1> Are you sure you want to delete {{i.name}}? </h1>
+
+<form action="#" method = 'post'>
+
+<input type='submit', value = 'Delete'>
+
+
+
+
+</form>
+
+<a href = '#'> Cancel </a>
+</body>
+
+</html>
